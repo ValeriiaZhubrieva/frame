@@ -5602,10 +5602,11 @@
             })
         });
     }
+    var body = document.getElementById('body');
     function initSliders() {
         if (document.querySelector(".swiper")) {
             var swiper = new core(".swiper", {
-                modules: [ Navigation, EffectFade ],
+                modules: [Navigation, EffectFade],
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
@@ -5621,10 +5622,13 @@
                 },
                 on: {}
             });
-            swiper.on("slideChange", (function() {
+            swiper.on("slideChange", (function () {
                 console.log(swiper.realIndex);
                 let nav = document.getElementsByClassName("navigation__bullet");
                 for (let i = 1; i < nav.length; i++) nav[swiper.realIndex].classList.add("active");
+                if (swiper.realIndex == 3 || swiper.realIndex == 5 || swiper.realIndex == 6 || swiper.realIndex == 7 || swiper.realIndex == 8 || swiper.realIndex == 9) {
+                    body.classList.add("disabled");
+                }
             }));
         }
     }
