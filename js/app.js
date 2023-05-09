@@ -5626,7 +5626,7 @@
                 console.log(swiper.realIndex);
                 let nav = document.getElementsByClassName("navigation__bullet");
                 for (let i = 1; i < nav.length; i++) nav[swiper.realIndex].classList.add("active");
-                if (swiper.realIndex == 3 || swiper.realIndex == 5 || swiper.realIndex == 6 || swiper.realIndex == 7 || swiper.realIndex == 8 || swiper.realIndex == 9) {
+                if (swiper.realIndex == 3 || swiper.realIndex == 7 || swiper.realIndex == 8 || swiper.realIndex == 9) {
                     body.classList.add("disabled");
                 }
             }));
